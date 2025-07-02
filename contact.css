@@ -55,13 +55,7 @@ nav {
     color: var(--secondary-color);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-.pages, .socialLinks {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    justify-content: space-evenly;
 }
 
 nav a {
@@ -93,3 +87,27 @@ nav a:hover, header a:hover, .content a:hover {
     font-size: 48px;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 0.5rem;
+}
+footer p {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    font-size: 15px;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.icons a:hover {
+    color: var(--primary-color);
+}
