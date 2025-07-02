@@ -152,7 +152,7 @@ main section {
 
 .guide {
 display: grid;
-grid-template-columns: 1;
+grid-template-columns: repeat(1, minmax(0,1fr));
 gap: 25px;
 
 }
@@ -209,19 +209,4 @@ footer p {
 
 .icons a:hover {
     color: var(--primary-color);
-}
-
-@media (min-width: 640px) {
-    .statsContainer {
-        flex-direction: row;
-    }
-
-    .stats {
-        gap: 0px;
-    }
-
-    .aboutMe {
-        width: 80%;
-        margin-right: auto;
-    }
 }
