@@ -284,4 +284,8 @@ footer p {
   .right {
     left: 0%;
   }
+
+  .imgContainer {
+    gap: 24px;
+}
 }
