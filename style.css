@@ -233,12 +233,14 @@ footer {
     margin: auto;
     gap: 0.5rem;
 }
+
 footer p {
     display: flex;
     align-items: center;
     margin: auto;
     font-size: 15px;
 }
+
 .icons {
     display: flex;
     flex-direction: row;
@@ -248,9 +250,15 @@ footer p {
     cursor: pointer;
 }
 
+.icons a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
 .icons a:hover {
     color: var(--primary-color);
 }
+
 
 
 /* Media queries - Responsive timeline on screens less than 600px wide */

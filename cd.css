@@ -208,6 +208,7 @@ footer p {
     margin: auto;
     font-size: 15px;
 }
+
 .icons {
     display: flex;
     flex-direction: row;
@@ -217,9 +218,15 @@ footer p {
     cursor: pointer;
 }
 
+.icons a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
 .icons a:hover {
     color: var(--primary-color);
 }
+
 
 @media (min-width: 640px) {
     .statsContainer {
