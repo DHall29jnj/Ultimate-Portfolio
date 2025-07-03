@@ -24,7 +24,36 @@
         </div>
     </header>
     <main>
-    
+                <!-- modify this form HTML and place wherever you want your form -->
+        <form
+        action="https://formspree.io/f/xvgryrkr"
+        method="POST"
+        enctype="multipart/form-data"
+        >
+        <div class="labels">
+            <label class="darkerText">
+                Your name:
+                <input type="text" name="name">
+            </label>
+            <label class="darkerText">
+                Your Phone Number:
+                <input type="number" name="YourPhone Number">
+            </label>
+            <label class="darkerText">
+                Your Email:
+                <input type="email" name="email">
+            </label>
+            <label class="darkerText">
+                Your Message:
+                <textarea name="message"></textarea>
+            </label>
+            <label class="darkerText">
+                Your file:
+                <input type="file" name="upload">
+            </label>
+        </div>
+        <button type="submit">Send</button>
+        </form>
     </main>
     <footer class="darkerText">
         <p>This website was designed by yours truly, using Visual Studio Code, HTML/CSS, and TailwindCSS.</p>

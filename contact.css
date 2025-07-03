@@ -87,6 +87,21 @@ nav a:hover, header a:hover, .content a:hover {
     font-size: 48px;
 }
 
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: auto;
+}
+
 footer {
     display: flex;
     flex-direction: column;
