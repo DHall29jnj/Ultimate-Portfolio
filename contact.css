@@ -131,6 +131,7 @@ main button {
     border-width: 2px;
     font-size: 24px;
     color: var(--primary-color);
+    margin-top: 40px;
 }
 
 main button:hover{
@@ -174,3 +175,4 @@ footer p {
 .icons a:hover {
     color: var(--primary-color);
 }
+
