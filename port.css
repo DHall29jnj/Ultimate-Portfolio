@@ -62,14 +62,14 @@ nav a {
     font-size: 1rem;
 }
 
-nav a, header a, .content a{
+nav a, header a, .projectInfo a{
     cursor: pointer;
     text-decoration: none;
     
 }
 
 
-nav a:hover, header a:hover, .content a:hover {
+nav a:hover, header a:hover, .projectInfo a:hover {
     opacity: 0.7;
 }
 
@@ -130,6 +130,10 @@ nav a:hover, header a:hover, .content a:hover {
 
 .projectInfo h3 {
     font-size: 20px;
+}
+
+.projectInfo a:hover {
+    text-decoration: underline;
 }
  
 .projectItem > div:last-child {
