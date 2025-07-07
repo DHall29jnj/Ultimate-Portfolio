@@ -217,7 +217,7 @@ section {
 
 /* The actual content */
 .content {
-  padding: 20px 30px;
+  padding: 20px 15px;
   background-color: var(--content-color);
   position: relative;
   border-radius: 6px;
