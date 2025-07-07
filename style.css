@@ -48,7 +48,7 @@ h1{
 header {
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 48px;
 }
 
 nav {
@@ -57,8 +57,6 @@ nav {
     flex-direction: row;
     justify-content: space-evenly;
 }
-
-
 
 nav a {
     font-size: 1rem;
@@ -89,10 +87,20 @@ nav a:hover, header a:hover, .content a:hover {
     font-size: 48px;
 }
 
-
-main section{
-    margin-top: 24px;
+.aboutMe {
+  padding: 0;
+  display: flex;
+  text-align: center;
+  line-height: 1.05rem;
+  max-width: 450px;
+  margin: auto;
+  opacity: 0.7;
 }
+
+.aboutMe p {
+  font-size: 14px;
+}
+
 
 .lowerHalf {
     display: flex;
