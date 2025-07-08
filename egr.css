@@ -182,17 +182,39 @@ width: fit-content;
 }
 
 footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.footerImg {
+    border-radius: 100%;
+    max-width: 96px;
+    overflow: hidden;
+}
+
+.footerImg img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.footerText {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: auto;
-    gap: 0.5rem;
+    gap: 0.75rem;
 }
-footer p {
+
+.footerText p {
     display: flex;
     align-items: center;
     margin: auto;
     font-size: 15px;
 }
+
 .icons {
     display: flex;
     flex-direction: row;
