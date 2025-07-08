@@ -210,3 +210,86 @@ footer p {
 .icons a:hover {
     color: var(--primary-color);
 }
+
+@media (min-width: 640px){
+
+  header {
+    max-width: 700px;
+  }
+
+p {
+    font-size: large;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.projectTitle h3 {
+        font-size: 22px;
+    }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+
+  .titleBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: auto;
+      padding: 1.75rem;
+      border: solid var(--primary-color);
+      border-width: 2px;
+  }
+
+  .titleBlock h1 {
+      font-size: 58px;
+  }
+
+  .projectContainer {
+   gap: 40px;
+}
+
+  .tenure {
+    font-size: large;
+  }
+}
+@media (min-width: 1200px) {
+  
+  header { 
+    max-width: 1000px;
+  }
+  p {
+    font-size: larger;
+  }
+    .titleBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: auto;
+      padding: 1.75rem;
+      border: solid var(--primary-color);
+      border-width: 2px;
+  }
+
+  .projectContainer {
+   gap: 48px;
+}
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .projectTitle h3 {
+        font-size: 24px;
+    }
+
+  .titleBlock h1 {
+      font-size: 72px;
+  }
+
+  .tenure {
+    font-size: larger;
+}
+}
