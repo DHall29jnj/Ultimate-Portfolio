@@ -156,10 +156,23 @@ main section {
 
 footer {
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    gap: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
+
+.footerImg {
+    border-radius: 100%;
+    max-width: 96px;
+    overflow: hidden;
+}
+
+.footerImg img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
 footer p {
     display: flex;
     align-items: center;
