@@ -142,8 +142,8 @@ section {
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1500px;
+  margin: auto;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -156,11 +156,12 @@ section {
   bottom: 0;
   left: 50%;
   margin-left: -3px;
+  z-index: 0;
 }
 
 /* Container around content */
 .container {
-  padding: 10px 50px;
+  padding: 10px 10px;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -172,7 +173,7 @@ section {
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -17px;
+  right: -45px;
   background-color: var(--content-color);
   border: 3.5px solid #0d0201;
   top: 15px;
@@ -182,12 +183,12 @@ section {
 
 /* Place the container to the left */
 .left {
-  left: 0;
+  left: -30px;
 }
 
 /* Place the container to the right */
 .right {
-  left: 50%;
+  left: 56%;
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -198,7 +199,7 @@ section {
   top: 22px;
   width: 0;
   z-index: 1;
-  right: 30px;
+  right: -5px;
   border: medium solid #373737;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #373737;
@@ -212,7 +213,7 @@ section {
   top: 22px;
   width: 0;
   z-index: 1;
-  left: 30px;
+  left: -5px;
   border: medium solid #373737;
   border-width: 10px 10px 10px 0;
   border-color: transparent #373737 transparent transparent;
@@ -220,7 +221,7 @@ section {
 
 /* Fix the circle for containers on the right side */
 .right::after {
-  left: -16px;
+  left: -46px;
 }
 
 /* The actual content */
@@ -231,11 +232,16 @@ section {
   border-radius: 6px;
  }
 
+.content h2, p {
+  max-width: fit-content;
+  max-height: 150px;
+}
+
  .content a:hover {
     text-decoration: underline;
  }
 
-
+ /* Timeline CSS stops here*/
 
 footer {
   display: flex;
@@ -313,12 +319,16 @@ footer {
   }
 
 /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
+  .right::after {
+    left: 15px;
+  }
+
+  .left::after {
     left: 15px;
   }
 
 /* Make all right containers behave like the left ones */
-  .right {
+  .right, .left {
     left: 0%;
   }
 
@@ -330,7 +340,7 @@ footer {
 @media (min-width: 640px){
 
   header {
-    max-width: fit-content;
+    max-width: 700px;
   }
 
   nav a {
@@ -375,6 +385,9 @@ footer {
   }
 }
 @media (min-width: 1200px) {
+  header {
+    max-width: 1000px;
+  }
   .titleBlock {
       display: flex;
       flex-direction: row;
