@@ -315,4 +315,10 @@ h2 {
   .tenure {
     font-size: larger;
 }
+.guideCard:hover {
+    padding: 8px;
+    opacity: 0.7;
+    i {
+        padding-left: 25px; }
+    }
 }
