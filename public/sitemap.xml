@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://ww.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://dametrius-hall-portfolio.netlify.app/</loc>
-            <lastmod>2025-07-10</lastmod>
-            <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://dametrius-hall-portfolio.netlify.app/egr</loc>
-            <lastmod>2025-07-10</lastmod>
-            <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dametrius-hall-portfolio.netlify.app/proj</loc>
-            <lastmod>2025-07-10</lastmod>
-            <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dametrius-hall-portfolio.netlify.app/prg</loc>
-            <lastmod>2025-07-10</lastmod>
-            <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://dametrius-hall-portfolio.netlify.app/ctc</loc>
-            <lastmod>2025-07-10</lastmod>
-            <priority>0.8</priority>
-    </url>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://dametrius-hall-portfolio.netlify.app/</loc></url>
+  <url><loc>https://dametrius-hall-portfolio.netlify.app/pages/ctc.html</loc></url>
+  <url><loc>https://dametrius-hall-portfolio.netlify.app/pages/egr.html</loc></url>
+  <url><loc>https://dametrius-hall-portfolio.netlify.app/pages/prg.html</loc></url>
+  <url><loc>https://dametrius-hall-portfolio.netlify.app/pages/proj.html</loc></url>
 </urlset>
