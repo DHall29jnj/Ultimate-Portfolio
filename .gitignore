@@ -1,2 +1,10 @@
-/public/assets/
-/public/google7ed1220e2b77a9fd.html/
+#Google site verification
+public/google*.html
+
+#Images
+public/assets/images/
+!public/assets/images/.keep
+
+#pdfs
+public/assets/pdfs/
+!public/assets/pdf/.keep
