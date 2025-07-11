@@ -2,8 +2,6 @@
 public/google*.html
 
 #Images
-public/assets/images/
-!public/assets/images/.keep
 
 #pdfs
 public/assets/pdfs/
