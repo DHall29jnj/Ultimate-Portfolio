@@ -39,6 +39,10 @@ p, a {
     font-size: 1rem;
 }
 
+.projImg {
+    display: none;
+}
+
 h1{
     color: var(--primary-color);
     font-size: 36px;
