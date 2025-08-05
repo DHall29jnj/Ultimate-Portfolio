@@ -3,6 +3,19 @@
     --secondary-color: #78787a;
     --bg-color: #fafaf9;
     --content-color:#e7e5e4;
+
+    /* Define base font sizes for different headings */
+    --h1-font-size-min: 2rem;   /* Minimum font size for h1 */
+    --h1-font-size-max: 4.5rem; /* Maximum font size for h1 */
+    --h1-font-size-vw: 5vw;   /* Preferred font size based on viewport width */
+
+    --h2-font-size-min: 1.5rem;
+    --h2-font-size-max: 3rem;
+    --h2-font-size-vw: 3.5vw;
+
+    --p-font-size-min: 1rem;
+    --p-font-size-max: 1.375rem; /* 22px / 16px = 1.375rem */
+    --p-font-size-vw: 1.25vw; /* 2.5vw is a common starting point, adjust as needed */
 }
 
 * {
@@ -37,12 +50,12 @@ footer {
 }
 
 p, a {
-    font-size: 1rem;
+    font-size: clamp(var(--p-font-size-min), var(--p-font-size-vw), var(--p-font-size-max));
 }
 
 h1{
     color: var(--primary-color);
-    font-size: 36px;
+    font-size: clamp(var(--h1-font-size-min), var(--h1-font-size-vw), var(--h1-font-size-max));
 }
 
 header {
@@ -58,16 +71,11 @@ nav {
     justify-content: space-evenly;
 }
 
-nav a {
-    font-size: 1rem;
-}
-
 nav a, header a, .content a{
     cursor: pointer;
     text-decoration: none;
     
 }
-
 
 nav a:hover, header a:hover, .content a:hover {
     opacity: 0.7;
@@ -84,7 +92,7 @@ nav a:hover, header a:hover, .content a:hover {
 }
 
 .titleBlock h1 {
-    font-size: 48px;
+    font-size: clamp(var(--h1-font-size-min), 4.8vw, 4.5rem);
 }
 
 .aboutMe {
@@ -98,7 +106,7 @@ nav a:hover, header a:hover, .content a:hover {
 }
 
 .aboutMe p {
-  font-size: 14px;
+  line-height: clamp(1.05rem, 1.2vw, 1.25rem); /* Adaptive line height */
 }
 
 
@@ -183,12 +191,12 @@ section {
 
 /* Place the container to the left */
 .left {
-  left: -30px;
+  left: -29px;
 }
 
 /* Place the container to the right */
 .right {
-  left: 56%;
+  left: 280px;
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -319,10 +327,7 @@ footer {
   }
 
 /* Make sure all circles are at the same spot */
-  .right::after {
-    left: 15px;
-  }
-
+  .right::after,
   .left::after {
     left: 15px;
   }
@@ -337,95 +342,48 @@ footer {
 }
 }
 
-@media (min-width: 640px){
+@media (min-width: 768px) { /* Changed from 640px to 768px for a clearer breakpoint, matching common tablet landscape */
+    header,
+    main,
+    footer {
+        max-width: 700px;
+    }
 
-  header {
-    max-width: 700px;
-  }
+    nav a {
+        font-size: 1.25rem; /* Adjusted for larger navigation links */
+    }
 
-  nav a {
-    font-size: 1.5rem;
-  }
+    .titleBlock {
+        padding: 1.75rem;
+    }
 
-  .titleBlock {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: auto;
-      padding: 1.75rem;
-      border: solid var(--primary-color);
-      border-width: 2px;
-  }
+    .titleBlock h1 {
+        font-size: 4.5rem; /* ~72px */
+    }
 
-  .titleBlock h1 {
-      font-size: 58px;
-  }
+    .aboutMe p {
+        font-size: 1.125rem; /* ~18px */
+        line-height: 1.1rem;
+    }
 
-  .aboutMe p {
-    font-size: 18px;
-    line-height: 1.1rem;
-  }
+    .lowerHalf h1 {
+        font-size: 3.75rem; /* ~60px */
+        font-weight: 500;
+    }
 
-  .lowerHalf h1 {
-    font-size: 60px;
-    font-weight: 500;
-  }
+    .imgContainer {
+        gap: 48px;
+        margin-top: 15px;
+    }
 
-  .imgContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 48px;
-    margin-top: 15px; 
-  }  
-  
-  .imgContainer img {
-    border-width: 2px;
-    max-width: 136px;
-    border-radius: 12px;
-  }
+    .imgContainer img {
+        border-width: 2px;
+        max-width: 136px;
+        border-radius: 12px;
+    }
+    
+    .right {
+      left: 380px;
+    }
 }
-@media (min-width: 1200px) {
-  header {
-    max-width: 1000px;
-  }
-  .titleBlock {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: auto;
-      padding: 1.75rem;
-      border: solid var(--primary-color);
-      border-width: 2px;
-  }
 
-  .titleBlock h1 {
-      font-size: 72px;
-  }
-
-  .aboutMe {
-    max-width: 550px;
-  }
-
-  .aboutMe p {
-    font-size: 22px;
-    line-height: 1.25rem;
-  }
-
-  .lowerHalf h1 {
-    font-size: 96px;
-    font-weight: 350;
-  }
-
-  .imgContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 64px;
-    margin-top: 15px; 
-  }  
-  
-  .imgContainer img {
-    border-width: 2px;
-    max-width: 172px;
-    border-radius: 12px;
-  }
-}
