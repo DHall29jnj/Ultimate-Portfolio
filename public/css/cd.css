@@ -81,14 +81,12 @@ nav a:hover, header a:hover, .content a:hover {
     align-items: center;
     margin: auto;
     padding: 1.75rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
     border: solid var(--primary-color);
     border-width: 2px;
 }
 
 .titleBlock h1 {
-    font-size: 48px;
+    font-size: 40px;
 }
 
 main,

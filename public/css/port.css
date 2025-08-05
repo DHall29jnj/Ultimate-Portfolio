@@ -2,6 +2,7 @@
     --primary-color: #dbeafe;
     --secondary-color: #60a5fa;
     --bg-color: #060d24;
+    --tl-cards: #35467d;
 }
 
 * {
@@ -35,12 +36,12 @@ footer {
     width: 100%;
 }
 
-p, a {
-    font-size: 1rem;
-}
-
 .projImg {
     display: none;
+}
+
+p, a {
+    font-size: 1rem;
 }
 
 h1{
@@ -66,14 +67,14 @@ nav a {
     font-size: 1rem;
 }
 
-nav a, header a, .projectInfo a{
+nav a, header a, .content a{
     cursor: pointer;
     text-decoration: none;
     
 }
 
 
-nav a:hover, header a:hover, .projectInfo a:hover {
+nav a:hover, header a:hover, .content a:hover {
     opacity: 0.7;
 }
 
@@ -82,13 +83,13 @@ nav a:hover, header a:hover, .projectInfo a:hover {
     flex-direction: row;
     align-items: center;
     margin: auto;
-    padding: 1.75rem;
+    padding: 1rem;
     border: solid var(--primary-color);
     border-width: 2px;
 }
 
 .titleBlock h1 {
-    font-size: 48px;
+    font-size: 40px;
 }
 
 .projectContainer {
@@ -135,10 +136,6 @@ nav a:hover, header a:hover, .projectInfo a:hover {
 .projectInfo h3 {
     font-size: 20px;
 }
-
-.projectInfo a:hover {
-    text-decoration: underline;
-}
  
 .projectItem > div:last-child {
     aspect-ratio: 16/9;
@@ -153,16 +150,247 @@ nav a:hover, header a:hover, .projectInfo a:hover {
     object-fit: cover;
 }
 
-main section {
+main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+/* Timelines CSS starts here */
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 750px;
+  margin: auto auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 0;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 10px;
+  position: relative;
+  background-color: inherit;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -45px;
+  background-color: var(--secondary-color);
+  border: 3.5px solid var(--primary-color);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: -279px;
+}
+
+/* Place the container to the right */
+.right {
+  left: 56%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: -5px;
+  border: medium solid var(--primary-color);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--primary-color);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: -5px;
+  border: medium solid var(--primary-color);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--primary-color) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -46px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 15px;
+  background-color: var(--tl-cards);
+  position: relative;
+  border-radius: 6px;
+ }
+
+.content h2, p {
+  max-width: fit-content;
+  max-height: 150px;
+}
+
+ .content a:hover {
+    text-decoration: underline;
+ }
+
+
+ @media (max-width: 1060px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid #373737;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #373737 transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .right::after {
+    left: 15px;
+  }
+
+  .left::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right, .left {
+    left: 0%;
+  }
+
+  .imgContainer {
+    gap: 24px;
+}
+}
+
+@media (max-width: 500px){
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid #373737;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #373737 transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .right::after {
+    left: 15px;
+  }
+
+  .left::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right, .left {
+    left: 0%;
+  }
+
+  .imgContainer {
+    gap: 24px;
+}
+
+  .content {
+    padding-bottom: 80px;
+}
+  .projectInfo {
+    display: grid;
     
-    padding-bottom: 64px;
+  }
+}
+ /* Timeline CSS stops here*/
+
+
+
+.guide {
+display: grid;
+grid-template-columns: repeat(1, minmax(0,1fr));
+gap: 25px;
+
+}
+.guideCard {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 10px;
+width: fit-content;
+}
+
+.guideCard i{
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+}
+.guide a {
+    text-decoration: none;
+}
+
+.guideCard:hover {
+    padding: 5px;
+    opacity: 0.7;
+    i {
+       padding-left: 10px; 
+    }
+    
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .footerImg {
@@ -210,13 +438,92 @@ footer {
     color: var(--primary-color);
 }
 
-@media screen and (min-width: 1000px) {
-    .projectContainer {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0,1fr));
-        gap: 32px;
+@media (min-width: 640px){
+
+header {
+max-width: 700px;
 }
-    main {
-        max-width: 1000px
+
+nav a {
+    font-size: 1.5rem;
+  }
+p {
+    font-size: large;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.projectTitle h3 {
+        font-size: 22px;
+    }
+
+  
+
+  .titleBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: auto;
+      padding: 1.75rem;
+      border: solid var(--primary-color);
+      border-width: 2px;
+  }
+
+  .titleBlock h1 {
+      font-size: 58px;
+  }
+
+  .projectContainer {
+   gap: 40px;
+}
+
+  .tenure {
+    font-size: large;
+  }
+}
+@media (min-width: 1200px) {
+  
+  header { 
+    max-width: 1000px;
+  }
+  p {
+    font-size: larger;
+  }
+    .titleBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: auto;
+      padding: 1.75rem;
+      border: solid var(--primary-color);
+      border-width: 2px;
+  }
+
+  .projectContainer {
+   gap: 48px;
+}
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .projectTitle h3 {
+        font-size: 24px;
+    }
+
+  .titleBlock h1 {
+      font-size: 72px;
+  }
+
+  .tenure {
+    font-size: larger;
+}
+.guideCard:hover {
+    padding: 8px;
+    opacity: 0.7;
+    i {
+        padding-left: 25px; }
     }
 }
