@@ -81,7 +81,6 @@ nav a, header a, .content a{
     
 }
 
-
 nav a:hover, header a:hover, .content a:hover {
     opacity: 0.7;
 }
@@ -439,20 +438,20 @@ h2 {
 }
 @media (min-width: 1200px) {
   
-  header
+  header,
   main,
   footer { 
     max-width: 1000px;
   }
 
   .titleBlock {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: auto;
-      padding: 1.75rem;
-      border: solid var(--primary-color);
-      border-width: 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    padding: 1.75rem;
+    border: solid var(--primary-color);
+    border-width: 2px;
   }
 
   .projectContainer {
