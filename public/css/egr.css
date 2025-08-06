@@ -259,11 +259,6 @@ main {
   border-radius: 6px;
  }
 
-.content h2, p {
-  max-width: fit-content;
-  max-height: 150px;
-}
-
  .content a:hover {
     text-decoration: underline;
  }
@@ -441,6 +436,10 @@ h2 {
   main,
   footer { 
     max-width: 1000px;
+  }
+
+  .right {
+    left: 530px;
   }
 
   .titleBlock {
