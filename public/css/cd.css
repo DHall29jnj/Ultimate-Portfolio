@@ -2,6 +2,19 @@
     --primary-color: #dffbb8;
     --secondary-color: #68b300;
     --bg-color: #000904;
+
+    /* Define base font sizes for different headings */
+    --h1-font-size-min: 2rem;   /* Minimum font size for h1 */
+    --h1-font-size-max: 4.5rem; /* Maximum font size for h1 */
+    --h1-font-size-vw: 5vw;   /* Preferred font size based on viewport width */
+
+    --h2-font-size-min: 1.5rem;
+    --h2-font-size-max: 3rem;
+    --h2-font-size-vw: 3.5vw;
+
+    --p-font-size-min: 1rem;
+    --p-font-size-max: 1.375rem; /* 22px / 16px = 1.375rem */
+    --p-font-size-vw: 1.25vw; /* 2.5vw is a common starting point, adjust as needed */
 }
 
 * {
@@ -36,12 +49,12 @@ footer {
 }
 
 p, a {
-    font-size: 1rem;
+   font-size: clamp(var(--p-font-size-min), var(--p-font-size-vw), var(--p-font-size-max));
 }
 
 h1{
     color: var(--primary-color);
-    font-size: 36px;
+    font-size: clamp(var(--h1-font-size-min), var(--h1-font-size-vw), var(--h1-font-size-max));
 }
 
 header {
@@ -57,14 +70,9 @@ nav {
     justify-content: space-evenly;
 }
 
-nav a {
-    font-size: 1rem;
-}
-
 nav a, header a, .content a{
     cursor: pointer;
     text-decoration: none;
-    
 }
 
 .projImg {
@@ -80,13 +88,13 @@ nav a:hover, header a:hover, .content a:hover {
     flex-direction: row;
     align-items: center;
     margin: auto;
-    padding: 1.75rem;
+    padding: 1rem;
     border: solid var(--primary-color);
     border-width: 2px;
 }
 
 .titleBlock h1 {
-    font-size: 40px;
+  font-size: clamp(var(--h1-font-size-min), 4.8vw, 4.5rem);
 }
 
 main,
@@ -246,14 +254,12 @@ footer {
     color: var(--primary-color);
 }
 
-@media (min-width: 640px) {
-  header {
-    max-width: 700px;
+@media (min-width: 768px) {
+  header,
+    main,
+    footer {
+        max-width: 700px;
   }
-
-    p {
-    font-size: large;
-}
 
     h2 {
     font-size: 2rem;
@@ -264,7 +270,7 @@ footer {
     }
 
   nav a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .titleBlock {
@@ -272,14 +278,13 @@ footer {
       flex-direction: row;
       align-items: center;
       margin: auto;
-      padding-left: 5rem;
-      padding-right: 5rem;
+      padding: 1.75rem;
       border: solid var(--primary-color);
       border-width: 2px;
   }
 
   .titleBlock h1 {
-      font-size: 58px;
+      font-size: 4.5rem;
   }
 
   .projectContainer {
@@ -292,22 +297,20 @@ footer {
 }
 @media (min-width: 1200px) {
   
-  header { 
+  header,
+  main,
+  footer { 
     max-width: 1000px;
   }
-  p {
-    font-size: larger;
-  }
-    .titleBlock {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: auto;
-      padding-left: 5rem;
-      padding-right: 5rem;
-      border: solid var(--primary-color);
-      border-width: 2px;
-  }
+.titleBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    padding: 1.75rem;
+    border: solid var(--primary-color);
+    border-width: 2px;
+}
 
   .projectContainer {
    gap: 68px;
@@ -322,7 +325,7 @@ footer {
     }
 
   .titleBlock h1 {
-      font-size: 72px;
+      font-size: 5rem;
   }
 
   .tenure {
