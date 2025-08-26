@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dametrius Hall | Engineer | Programmer | Web Developer Portfolio</title>
-    <meta name="description" content="Showcasing the work of Dametrius Hall, an engineering student, programmer, and cad designer with expertise in responsive web development and user-centered design. Explore projects and experience.">
-    <meta name="google-site-verification" content="wkvYispIAt5pa0Pb-UaRvCX-0djqYXB6NiX8oXkP-Qg" />
+    <title>Andrew Jones | Physical Therapist | Guitar Hobbiest</title>
+    <meta name="description" content="Andrew Jones, Physical Therapist Student: Specializing in Functional Fitness and Patient-Centered Care">
 
     <!-- Open graph tags-->
-    <meta property="og:title" content="Dametrius Hall | Front-End Developer & UI/UX Designer Portfolio">
-    <meta property="og:description" content="Showcasing the work of Dametrius Hall, an engineering student, programmer, and cad designer with expertise in responsive web development and user-centered design. Explore projects and experience.">
+    <meta property="og:title" content="Andrew Jones | Physical Therapist Student">
+    <meta property="og:description" content="Andrew Jones, Physical Therapist Student: Specializing in Functional Fitness and Patient-Centered Care">
     <meta property="og:image" content="https://dametrius-hall.com/public/assets/images/DH48.png">
     <meta property="og:url" content="https://dametrius-hall.com/">
     <meta property="og:type" content="website">
 
     <!--Twitter tags-->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dametrius Hall | Front-End Developer Portfolio">
-    <meta name="twitter:description" content="Showcasing the work of Dametrius Hall, an engineering student, programmer, and cad designer with expertise in responsive web development and user-centered design. Explore projects and experience.">
+    <meta name="twitter:title" content="Andrew Jones | Physical Therapist Student">
+    <meta name="twitter:description" content="Andrew Jones, Physical Therapist Student: Specializing in Functional Fitness and Patient-Centered Care">
     <meta name="twitter:image" content="https://dametrius-hall.com/public/assets/images/DH48.png">
-    <meta name="twitter:image:alt" content="Dametrius Hall's portfolio homepage, featuring a modern web design and showcases projects.">
+    <meta name="twitter:image:alt" content="website cover image">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,13 +31,29 @@
 <body>
     <header>
         <nav>
-            <a class="darkerText" href="/">Home</a>
-            <a class="darkerText" href="pages/egr.html">Engineering</a>
-            <a class="darkerText" href="pages/prg.html">Programming</a>
-            <a class="darkerText" href="pages/ctc.html">Contact</a>
+            <!-- Desktop Menu-->
+             <div class="desktop-nav">
+                <a class="darkerText" href="/">Home</a>
+                <a class="darkerText" href="pages/egr.html">Engineering</a>
+                <a class="darkerText" href="pages/prg.html">Programming</a>
+                <a class="darkerText" href="pages/ctc.html">Contact</a>
+            </div>
+            <!-- Mobile menu: hidden by default on desktop -->
+             <div class="">
+                <button id="hamburger-button" class="darkerText">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="mobile-nav">
+                <a href="/" class="darkerText">Home</a>
+                <a href="pages/egr.html" class="darkerText">Engineering</a>
+                <a href="pages/prg.html" class="darkerText">Programming</a>
+                <a href="/pages/ctc.html" class="darkerText">Contact</a>
+            </div>
         </nav>
+        <!--End of nav bar-->
         <div class="titleBlock">
-            <h1>DAMETRIUS HALL</h1>
+            <h1>Andrew Jones</h1>
         </div>
         <div class="aboutMe">
             <p >Hi, I am Dametrius Hall. I am a Mechanical Engineer currently working at Johnson & Johnson Medtech. In addition to my engineering work, I do a lot of coding projects on the side. Some of the languages I work in are JavaScript and Python. I have also written many webpages using HTML, CSS, and JavaScript Framworks such as Vue and React </p>
@@ -100,5 +115,20 @@
                 </a>
         </div>
     </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menu = document.getElementById("mobile-menu");
+    const hamburger = document.getElementById("hamburger-button");
+    hamburger.addEventListener("click", () => {
+      menu.classList.toggle("translate-x-full");
+    });
+    // Optional: auto-close mobile menu on nav link click
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.add("translate-x-full");
+      });
+    });
+  });
+</script>
 </body>
 </html>
